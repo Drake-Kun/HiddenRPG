@@ -6,6 +6,4 @@ public class PlayerInformationGlobal : MonoBehaviour {
 
     public bool unit1InParty;
     public bool unit2InParty;
-    
-	
 }
