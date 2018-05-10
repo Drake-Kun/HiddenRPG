@@ -44,7 +44,8 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
         // expGiven = all of the enemies expGiven stats added together
         // SO:
-        expGiven = enemy1.GetComponent<EnemyInformation>().exp + enemy2.GetComponent<EnemyInformation>().exp;
+        
+        //expGiven = enemy1.GetComponent<>().exp + enemy2.GetComponent<>().exp;
         
     }
 

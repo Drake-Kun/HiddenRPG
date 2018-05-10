@@ -30,14 +30,14 @@ public class SpawnEnemies : MonoBehaviour {
         int unitNumber = 1;
 
 
-        for (enemyType1Amount; enemyType1Amount > 0; enemyType1Amount--)
+        for (int i = enemyType1Amount; enemyType1Amount > 0; enemyType1Amount--)
         {
             // Instantiate an enemyType1, call it ("enemyUnit" + unitNumber)
 
             
         }
 
-        for (enemyType2Amount; enemyType2Amount > 0; enemyType2Amount--)
+        for (int i = enemyType2Amount; enemyType2Amount > 0; enemyType2Amount--)
         {
             // Instantiate an enemyType2, call it ("enemyUnit" + unitNumber)
 

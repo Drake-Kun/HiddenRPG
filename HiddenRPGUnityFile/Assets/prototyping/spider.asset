@@ -9,7 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e889f978febbff54fa4fa4e8454cf74b, type: 3}
-  m_Name: enemy
+  m_Name: spider
   m_EditorClassIdentifier: 
   hp: 0
   expgiven: 0
+  sprite: {fileID: 0}
