@@ -12,6 +12,8 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
     // FOR NOW:
     public GameObject player1;
 
+    public GameObject player1TargetUnit;
+
     // Create a GameObject list here for our enemy units
     // FOR NOW
     public GameObject enemy1;
@@ -63,6 +65,9 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
             case (BattleStates.PLAYERCHOICE):
 
+                // (player1 selects a target)
+                // player1TargetUnit = Some game object
+
                 break;
 
 
@@ -72,6 +77,10 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
 
             case (BattleStates.CALCULATEDAMAGE):
+
+                // (player1s turn)
+                // We use fireball
+                // GetComponent<SpellFunctions>().Fireball();
 
                 break;
 
