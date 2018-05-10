@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName ="character",menuName = "party",order = 0)]
 public class combatidea : ScriptableObject {
+    public string Name;
     public Sprite sprite;
     public int hp;
     public int lv;
@@ -19,7 +20,7 @@ public class combatidea : ScriptableObject {
     public bool prof_intel;
     public bool prof_def;
     public bool prof_magdef;
-
+    public string[] spellbook;
     public void AfterBattle()
     {
 
@@ -30,15 +31,40 @@ public class combatidea : ScriptableObject {
             expNeeded += exponent;
             exponent += 300;
             if (!prof_str)
-                str += str + 3;
+                str += str + 3 +Mathf.RoundToInt(lv * .2f);
             else if (prof_str)
             {
                 str += str + 6;
-            } 
+            }
+            if (!prof_speed)
+                speed += speed + 3 + Mathf.RoundToInt(lv * .2f);
+            else if (prof_speed)
+            {
+                speed += speed + 6;
+            }
+            if (!prof_intel)
+                intel += intel + 3 + Mathf.RoundToInt(lv * .2f);
+            else if (prof_intel)
+            {
+                intel += intel + 6;
+            }
+            if (!prof_def)
+                def += def + 3 + Mathf.RoundToInt(lv * .2f);
+            else if (prof_def)
+            {
+                def += def + 6;
+            }
+            if (!prof_magdef)
+                magdef += magdef + 3 + Mathf.RoundToInt(lv * .2f);
+            else if (prof_magdef)
+            {
+                magdef += magdef + 6;
+            }
         }
         // add exp
         // check if we level up
         // if level up: add stats
+        
     }
                          
 }
