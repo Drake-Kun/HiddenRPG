@@ -7,10 +7,18 @@ using UnityEngine.EventSystems;
 
 public class TurnBasedCombatStateMachine : MonoBehaviour {
 
-    // Create a list here for our party members
-    // Create a list here for our enemy units
+    // Create a GameObject list here for our party members
+    
+    // FOR NOW:
+    public GameObject player1;
 
-    public int expRewarded;
+    // Create a GameObject list here for our enemy units
+    // FOR NOW
+    public GameObject enemy1;
+    public GameObject enemy2;
+
+
+    public int expGiven;
 
     public enum BattleStates
     {
@@ -35,6 +43,8 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         // Spawn enemies
 
         // expGiven = all of the enemies expGiven stats added together
+        // SO:
+        expGiven = enemy1.GetComponent<EnemyInformation>().exp + enemy2.GetComponent<EnemyInformation>().exp;
         
     }
 
@@ -71,6 +81,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
 
             case (BattleStates.WIN):
+
 
                 break;
 
