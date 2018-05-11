@@ -216,14 +216,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Brigand
-  hpMax: 10
+  hpMax: 18
   hpCurrent: 0
-  spMax: 6
+  spMax: 3
   spCurrent: 0
-  str: 4
-  intel: 1
-  spd: 4
-  def: 1
+  str: 5
+  intel: 5
+  spd: 5
+  def: 3
   magicdef: 2
   isBurned: 0
   isPoisoned: 0
@@ -614,15 +614,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Ruffian
-  hpMax: 10
+  hpMax: 20
   hpCurrent: 0
-  spMax: 6
+  spMax: 5
   spCurrent: 0
-  str: 4
-  intel: 1
-  spd: 4
-  def: 1
-  magicdef: 2
+  str: 8
+  intel: 2
+  spd: 5
+  def: 4
+  magicdef: 3
   isBurned: 0
   isPoisoned: 0
   isStunned: 0
