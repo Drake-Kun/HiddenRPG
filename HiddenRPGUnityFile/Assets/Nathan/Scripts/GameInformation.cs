@@ -7,6 +7,7 @@ public class GameInformation : MonoBehaviour {
     // areaID #1 = "A place"
     // areaID #2 = "A different place"
     // etc.
+    
 
     public int areaID;
     

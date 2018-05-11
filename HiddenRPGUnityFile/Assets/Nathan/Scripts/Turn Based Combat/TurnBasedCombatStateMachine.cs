@@ -7,17 +7,11 @@ using UnityEngine.EventSystems;
 
 public class TurnBasedCombatStateMachine : MonoBehaviour {
 
-    // Create a GameObject list here for our party members
+    public List<GameObject> playerUnits;
+
+    public List<GameObject> enemyUnits;
+
     
-    // FOR NOW:
-    public GameObject player1;
-
-    public GameObject player1TargetUnit;
-
-    // Create a GameObject list here for our enemy units
-    // FOR NOW
-    public GameObject enemy1;
-    public GameObject enemy2;
 
 
     public int expGiven;
@@ -42,6 +36,10 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
     void Start()
     {
         currentState = BattleStates.START;
+		if(enemyUnits.Count > 1)
+		{
+			//			
+		}
         // Spawn enemies
 
         // expGiven = all of the enemies expGiven stats added together
@@ -87,11 +85,14 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
             case (BattleStates.LOSE):
 
+                // Go back to last save point
+
                 break;
 
 
             case (BattleStates.WIN):
 
+                // Reward exp and go back to the location where the player entered battle
 
                 break;
 
