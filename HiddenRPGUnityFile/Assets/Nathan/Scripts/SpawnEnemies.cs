@@ -44,6 +44,8 @@ public class SpawnEnemies : MonoBehaviour {
 
         else if (numberOfEnemies == 3)
         {
+            int spawnType = Random.Range(1, 101);
+
             // 25% chance: 1-2 Slimes-Small Slimes
             if (spawnType > 75)
             {
