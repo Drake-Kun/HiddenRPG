@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour {
 
+	public GameObject slimePrefab;
+	public GameObject smallSlimePrefab;
+	public GameObject brigandPrefab;
+	public GameObject ruffianPrefab;
+
     void Start()
     {
         Area1Spawn();
@@ -24,14 +29,22 @@ public class SpawnEnemies : MonoBehaviour {
             int spawnType = Random.Range(1, 101);
 
             // 15% chance: Spawn a 1-1 ratio of Slimes to Small Slimes,
-            if (spawnType > 85)
+            if (spawnType > 70)
             {
+				GameObject normalSlime;
+				GameObject smallSlime;
+				normalSlime = Instantiate(slimePrefab, GetComponentInParent<Transform>());
+				smallSlime = Instantiate(smallSlimePrefab, GetComponentInParent<Transform>());
                 //Instantiate a slime (EnemyUnit1) and a small slime (EnemyUnit2)
             }
 
             // 25% chance: OR all are Slimes
-            if (spawnType <= 85 && spawnType > 60)
+            if (spawnType <= 70 && spawnType > 60)
             {
+				GameObject normalSlime1;
+				GameObject normalSlime2;
+				normalSlime1 = Instantiate(slimePrefab, GetComponentInParent<Transform>());
+				normalSlime2 = Instantiate(slimePrefab, GetComponentInParent<Transform>());
                 //Instantiate two Slimes (EnemyUnit1)(EnemyUnit2)
             }
 
