@@ -17,6 +17,11 @@ public class combatidea : ScriptableObject {
     public int intel;
     public int def;
     public int magdef;
+    public int Cstr;
+    public int Cspeed;
+    public int Cintel;
+    public int Cdef;
+    public int Cmagdef;
     public int hpscale;
     public bool prof_str;
     public bool prof_speed;
@@ -33,14 +38,16 @@ public class combatidea : ScriptableObject {
         {
             lv++;
             expNeeded += exponent;
-            exponent += 300;
+            exponent += 100 * lv;
             if(hpscale <= 4)
             {
                 maxhp += hpscale;
+                hp = maxhp;
             }
             if (hpscale <= 4)
             {
-                maxhp += hpscale;
+                maxhp += hpscale + Mathf.RoundToInt(lv * .2f);
+                hp = maxhp;
             }
             if (!prof_str)
                 str = str + 3 +Mathf.RoundToInt(lv * .2f);
@@ -72,6 +79,15 @@ public class combatidea : ScriptableObject {
             {
                 magdef = magdef + 6 + Mathf.RoundToInt(lv * .25f);
             }
+            Cdef = def;
+            Cmagdef = magdef;
+            Cspeed = speed;
+            Cstr = str;
+            intel = Cintel;
+
+
+
+
         }
         // add exp
         // check if we level up

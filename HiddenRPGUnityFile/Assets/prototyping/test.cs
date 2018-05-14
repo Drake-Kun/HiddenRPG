@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class test : MonoBehaviour {
     public combatidea ok;
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public combatidea aok;
+    public combatidea bok;
+    public combatidea cok;
+    // Use this for initialization
+    void Start () {
+       
+             
+    }
 	
 	// Update is called once per frame
 	void Update () {
