@@ -7,7 +7,11 @@ using UnityEngine.EventSystems;
 
 public class TurnBasedCombatStateMachine : MonoBehaviour {
 
-    public List<GameObject> playerUnits;
+    public List<GameObject> partyUnits;
+    public List<string> partyMember1Spells;
+    public List<string> partyMember2Spells;
+    public List<string> partyMember3Spells;
+    public List<string> partyMember4Spells;
 
     public List<GameObject> enemyUnits;
 
@@ -28,21 +32,25 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
     public static BattleStates currentState;
 
-    public void SpawnEnemies()
-    {
-
-    }
-
     void Start()
     {
         currentState = BattleStates.START;
-		// Spawn enemies
 
-        // expGiven = all of the enemies expGiven stats added together
-        // SO:
+        // Grabs the list of our party units from our (GameInformationObject)
+        //playerUnits = GetComponent<listofParty>().list;
+        //partyMember1Spells = lis
         
-        //expGiven = enemy1.GetComponent<>().exp + enemy2.GetComponent<>().exp;
-        
+
+        // Grabs the (enemies) list from the (SpawnEnemies) script
+        enemyUnits = GetComponent<SpawnEnemies>().enemies;
+    
+        // Goes through the (EnemyUnits) list and get sthe (expGiven) stat from each enemy,
+        // then adds them all up into our (expGiven) stat in this script
+        for (int i = 0; i < enemyUnits.Count; i++)
+        {
+            expGiven += enemyUnits[i].GetComponent<EnemyInformation>().expGiven;
+        }
+                
     }
 
     void Update()

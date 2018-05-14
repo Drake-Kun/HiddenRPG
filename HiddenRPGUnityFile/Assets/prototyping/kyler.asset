@@ -11,11 +11,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e682b48bfd80240b436768ad5e0ed5, type: 3}
   m_Name: kyler
   m_EditorClassIdentifier: 
-  hp: 0
-  lv: 0
-  exp: 0
-  str: 0
-  speed: 0
-  intel: 0
-  def: 0
-  magdef: 0
+  Name: kyler
+  sprite: {fileID: 0}
+  mana: 10
+  maxhp: 9
+  hp: 9
+  lv: 21
+  exp: 72900
+  expNeeded: 75900
+  exponent: 6900
+  str: 7
+  speed: 3
+  intel: 3
+  def: 6
+  magdef: 6
+  hpscale: 0
+  prof_str: 1
+  prof_speed: 0
+  prof_intel: 0
+  prof_def: 1
+  prof_magdef: 1
+  spellbook: []

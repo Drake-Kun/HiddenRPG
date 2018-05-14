@@ -15,6 +15,8 @@ public class EnemyInformation : MonoBehaviour {
     public int def;
     public int magicdef;
 
+    public int expGiven;
+
     public bool isBurned;
     public bool isPoisoned;
     public bool isStunned;
