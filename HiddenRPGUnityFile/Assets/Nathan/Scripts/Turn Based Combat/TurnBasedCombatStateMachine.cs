@@ -36,11 +36,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
     void Start()
     {
         currentState = BattleStates.START;
-		if(enemyUnits.Count > 1)
-		{
-			//			
-		}
-        // Spawn enemies
+		// Spawn enemies
 
         // expGiven = all of the enemies expGiven stats added together
         // SO:
