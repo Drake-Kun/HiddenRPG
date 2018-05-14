@@ -28,7 +28,7 @@ public class combatidea : ScriptableObject {
     public bool prof_intel;
     public bool prof_def;
     public bool prof_magdef;
-    public string[] spellbook;
+    public List<string> spellbook;
 
     public void AfterBattle()
     {
