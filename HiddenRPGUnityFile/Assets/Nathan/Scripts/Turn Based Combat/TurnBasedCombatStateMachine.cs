@@ -7,7 +7,11 @@ using UnityEngine.EventSystems;
 
 public class TurnBasedCombatStateMachine : MonoBehaviour {
 
-    public List<GameObject> playerUnits;
+    public List<GameObject> partyUnits;
+    public List<string> partyMember1Spells;
+    public List<string> partyMember2Spells;
+    public List<string> partyMember3Spells;
+    public List<string> partyMember4Spells;
 
     public List<GameObject> enemyUnits;
 
@@ -31,6 +35,11 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
     void Start()
     {
         currentState = BattleStates.START;
+
+        // Grabs the list of our party units from our (GameInformationObject)
+        //playerUnits = GetComponent<listofParty>().list;
+        //partyMember1Spells = lis
+        
 
         // Grabs the (enemies) list from the (SpawnEnemies) script
         enemyUnits = GetComponent<SpawnEnemies>().enemies;
