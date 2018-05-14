@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Gerardo/Lvl1.unity
+    guid: dba9f3784dee0224588d3c4992fffc78
+  - enabled: 1
+    path: Assets/Gerardo/Lvl2.unity
+    guid: b65e84d806b3a6f498b091318f84d7c9
+  - enabled: 1
+    path: Assets/Gerardo/Town1.unity
+    guid: c20b74b48ba35da45a93fa75cb32a85c
   m_configObjects: {}
