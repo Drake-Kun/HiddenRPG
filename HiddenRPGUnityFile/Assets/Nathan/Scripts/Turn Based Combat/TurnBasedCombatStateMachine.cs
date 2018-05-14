@@ -7,11 +7,15 @@ using UnityEngine.EventSystems;
 
 public class TurnBasedCombatStateMachine : MonoBehaviour {
 
-    public List<GameObject> partyUnits;
+    public GameObject gameinfo;
+    public List<combatidea> partyUnits;
     public List<string> partyMember1Spells;
     public List<string> partyMember2Spells;
     public List<string> partyMember3Spells;
     public List<string> partyMember4Spells;
+
+    public GameObject activePartyMember;
+    public GameObject targetUnit;
 
     public List<GameObject> enemyUnits;
 
@@ -37,9 +41,17 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         currentState = BattleStates.START;
 
         // Grabs the list of our party units from our (GameInformationObject)
-        //playerUnits = GetComponent<listofParty>().list;
-        //partyMember1Spells = lis
-        
+        for (int i = 0; i < 4; i++)
+        {
+            partyUnits.Add(gameinfo.GetComponent<listofParty>().ReturnChar(i));
+        }
+
+        // Grab the spellbooks of each party member and set our spellbooks on *this* script to those values
+        partyMember1Spells = gameinfo.GetComponent<listofParty>().ReturnChar(0).spellbook;
+        partyMember2Spells = gameinfo.GetComponent<listofParty>().ReturnChar(1).spellbook;
+        partyMember3Spells = gameinfo.GetComponent<listofParty>().ReturnChar(2).spellbook;
+        partyMember4Spells = gameinfo.GetComponent<listofParty>().ReturnChar(3).spellbook;
+
 
         // Grabs the (enemies) list from the (SpawnEnemies) script
         enemyUnits = GetComponent<SpawnEnemies>().enemies;
@@ -66,6 +78,8 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
 
             case (BattleStates.PLAYERCHOICE):
+
+                
 
                 // (player1 selects a target)
                 // player1TargetUnit = Some game object

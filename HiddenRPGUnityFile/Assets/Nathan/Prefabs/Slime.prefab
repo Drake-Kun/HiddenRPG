@@ -62,6 +62,7 @@ MonoBehaviour:
   spd: 4
   def: 1
   magicdef: 2
+  expGiven: 40
   isBurned: 0
   isPoisoned: 0
   isStunned: 0

@@ -4,8 +4,27 @@ using UnityEngine;
 
 public class SpellFunctions : MonoBehaviour {
 
+
+    public void converter(string name)
+    {
+        switch(name){
+            case "Fireball":
+                Fireball();
+                break;
+
+            case "Taunt":
+                Taunt();
+                break;
+
+            case "Cleave":
+                Cleave();
+                break;
+        }       
+    }
+
     public void Fireball()
     {
+        // Get activePartyMember
         // Get playerTargetUnit
         // do damage - Mathf.Round(magicDamage * 1.1)
 
