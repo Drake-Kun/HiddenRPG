@@ -28,21 +28,20 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
     public static BattleStates currentState;
 
-    public void SpawnEnemies()
-    {
-
-    }
-
     void Start()
     {
         currentState = BattleStates.START;
-		// Spawn enemies
 
-        // expGiven = all of the enemies expGiven stats added together
-        // SO:
-        
-        //expGiven = enemy1.GetComponent<>().exp + enemy2.GetComponent<>().exp;
-        
+        // Grabs the (enemies) list from the (SpawnEnemies) script
+        enemyUnits = GetComponent<SpawnEnemies>().enemies;
+    
+        // Goes through the (EnemyUnits) list and get sthe (expGiven) stat from each enemy,
+        // then adds them all up into our (expGiven) stat in this script
+        for (int i = 0; i < enemyUnits.Count; i++)
+        {
+            expGiven += enemyUnits[i].GetComponent<EnemyInformation>().expGiven;
+        }
+                
     }
 
     void Update()
