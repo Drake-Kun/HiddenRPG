@@ -22,6 +22,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
 
     public int expGiven;
+    public bool expGivenBool;
 
     public enum BattleStates
     {
@@ -38,7 +39,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
     void Start()
     {
         currentState = BattleStates.START;
-
+        expGivenBool = false;
         // Grabs the list of our party units from our (GameInformationObject)
         for (int i = 0; i < 4; i++)
         {
@@ -60,12 +61,14 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
     void Update()
     {
+        activePartyMember = partyUnits[activePartyMemberInt];
+
         switch (currentState)
         {
 
             case (BattleStates.START):
 
-
+                activePartyMemberInt = 0;
 
                 break;
 
@@ -74,8 +77,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
                 
 
-                // (player1 selects a target)
-                // activePartyMember
+                
 
                 break;
 
@@ -87,7 +89,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
             case (BattleStates.CALCULATEDAMAGE):
 
-
+                
 
                 // (player1s turn)
                 // We use fireball
@@ -104,11 +106,61 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
 
             case (BattleStates.WIN):
+                
+                if (expGivenBool == false)
+                {
+                    for (int i = 0; i < partyUnitsInfo.Count; i++)
+                    {
+                        partyUnitsInfo[i].AfterBattle();
+                    }
 
-                // Reward exp and go back to the location where the player entered battle
+                    expGivenBool = true;
+                }
+                // if (you press continue) { SceneManager.SetActiveScene(gameinfo.GetComponent<GameInformation>().OverworldScene); }
 
                 break;
 
         }
+    }
+
+    void OnClickAttack()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().actionName = "Attack";
+    }
+
+    void OnclickSpell1()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[0];
+    }
+
+    void OnclickSpell2()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[1];
+    }
+
+    void OnclickSpell3()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[2];
+    }
+
+    void OnclickSpell4()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[3];
+    }
+
+    void OnclickSpell5()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[4];
+    }
+
+    void OnclickSpell6()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[5];
+    }
+
+    void OnClickEnemy1()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().targetUnit = enemyUnits[0];
+        activePartyMemberInt++;
     }
 }

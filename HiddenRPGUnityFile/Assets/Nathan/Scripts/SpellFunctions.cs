@@ -8,6 +8,10 @@ public class SpellFunctions : MonoBehaviour {
     public void converter(string name)
     {
         switch(name){
+            case "Attack":
+                Attack();
+                break;
+
             case "Fireball":
                 Fireball();
                 break;
@@ -22,16 +26,23 @@ public class SpellFunctions : MonoBehaviour {
         }       
     }
 
+    public void Attack()
+    {
+        GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<CalculateDamage>().physAtk =
+            GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<PlayerInformation>().representative.str * 1;
+    }
+
     public void Fireball()
     {
-        // Get activePartyMember
-        // Get playerTargetUnit
-        // do damage - Mathf.Round(magicDamage * 1.1)
+        GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<CalculateDamage>().magAtk = 
+            GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<PlayerInformation>().representative.intel * 1;
+
+        GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<CalculateDamage>().fireDamage = true;
 
         int inflictStatusAilment = Random.Range (1,101);
         if (inflictStatusAilment > 60)
         {
-            // Set (isBurned) on the enemy to true;
+            GetComponent<TurnBasedCombatStateMachine>().targetUnit.GetComponent<EnemyInformation>().isBurned = true;
         }
     }
 
