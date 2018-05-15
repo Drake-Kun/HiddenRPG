@@ -8,18 +8,17 @@ using UnityEngine.EventSystems;
 public class TurnBasedCombatStateMachine : MonoBehaviour {
 
     public GameObject gameinfo;
-    public List<combatidea> partyUnits;
-    public List<string> partyMember1Spells;
-    public List<string> partyMember2Spells;
-    public List<string> partyMember3Spells;
-    public List<string> partyMember4Spells;
+    public List<combatidea> partyUnitsInfo;
+    public List<GameObject> partyUnits;
+    public List<string> currentSpellBook;
 
+    public int activePartyMemberInt;
     public GameObject activePartyMember;
     public GameObject targetUnit;
 
     public List<GameObject> enemyUnits;
 
-    
+    public List<GameObject> orderOfCombat;
 
 
     public int expGiven;
@@ -43,14 +42,8 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         // Grabs the list of our party units from our (GameInformationObject)
         for (int i = 0; i < 4; i++)
         {
-            partyUnits.Add(gameinfo.GetComponent<listofParty>().ReturnChar(i));
+            partyUnitsInfo.Add(gameinfo.GetComponent<listofParty>().ReturnChar(i));
         }
-
-        // Grab the spellbooks of each party member and set our spellbooks on *this* script to those values
-        partyMember1Spells = gameinfo.GetComponent<listofParty>().ReturnChar(0).spellbook;
-        partyMember2Spells = gameinfo.GetComponent<listofParty>().ReturnChar(1).spellbook;
-        partyMember3Spells = gameinfo.GetComponent<listofParty>().ReturnChar(2).spellbook;
-        partyMember4Spells = gameinfo.GetComponent<listofParty>().ReturnChar(3).spellbook;
 
 
         // Grabs the (enemies) list from the (SpawnEnemies) script
@@ -82,7 +75,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
                 
 
                 // (player1 selects a target)
-                // player1TargetUnit = Some game object
+                // activePartyMember
 
                 break;
 
@@ -93,6 +86,8 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
 
             case (BattleStates.CALCULATEDAMAGE):
+
+
 
                 // (player1s turn)
                 // We use fireball
