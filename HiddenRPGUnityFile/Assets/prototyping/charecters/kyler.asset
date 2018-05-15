@@ -9,31 +9,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61e682b48bfd80240b436768ad5e0ed5, type: 3}
-  m_Name: nathan
+  m_Name: kyler
   m_EditorClassIdentifier: 
-  Name: nathan
-  sprite: {fileID: 21300000, guid: bf4f7bfd6e6fa7e449c91cb68528381e, type: 3}
-  mana: 0
-  maxhp: 0
-  hp: 0
-  lv: 0
-  exp: 0
-  expNeeded: 0
-  exponent: 900
-  str: 0
-  speed: 0
-  intel: 0
-  def: 0
-  magdef: 0
-  Astr: 0
-  Aspeed: 0
-  Aintel: 0
-  Adef: 0
-  Amagdef: 0
+  Name: kyler
+  sprite: {fileID: 0}
+  mana: 10
+  maxhp: 9
+  hp: 9
+  lv: 21
+  exp: 72900
+  expNeeded: 75900
+  exponent: 6900
+  str: 7
+  speed: 3
+  intel: 3
+  def: 6
+  magdef: 6
+  Cstr: 0
+  Cspeed: 0
+  Cintel: 0
+  Cdef: 0
+  Cmagdef: 0
   hpscale: 0
-  prof_str: 0
+  prof_str: 1
   prof_speed: 0
   prof_intel: 0
-  prof_def: 0
-  prof_magdef: 0
+  prof_def: 1
+  prof_magdef: 1
   spellbook: []

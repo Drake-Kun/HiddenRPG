@@ -9,20 +9,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61e682b48bfd80240b436768ad5e0ed5, type: 3}
-  m_Name: character
+  m_Name: nathan
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  Name: nathan
+  sprite: {fileID: 21300000, guid: bf4f7bfd6e6fa7e449c91cb68528381e, type: 3}
+  mana: 0
+  maxhp: 0
   hp: 0
   lv: 0
   exp: 0
   expNeeded: 0
+  exponent: 900
   str: 0
   speed: 0
   intel: 0
   def: 0
   magdef: 0
+  Cstr: 0
+  Cspeed: 0
+  Cintel: 0
+  Cdef: 0
+  Cmagdef: 0
+  hpscale: 0
   prof_str: 0
   prof_speed: 0
   prof_intel: 0
   prof_def: 0
   prof_magdef: 0
+  spellbook: []
