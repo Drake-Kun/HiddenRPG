@@ -4,7 +4,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="character",menuName = "party",order = 0)]
 public class combatidea : ScriptableObject {
     public string Name;
+    [Space]
     public Sprite sprite;
+    [Space]
+    public items weapon;
+    items whatWasWeapon;
+    [Space]
     public int mana;
     public int maxhp;
     public int hp;
@@ -12,6 +17,7 @@ public class combatidea : ScriptableObject {
     public int exp;
     public int expNeeded;
     public int exponent = 900;
+    [Space]
     public int str;
     public int speed;
     public int intel;
@@ -23,11 +29,13 @@ public class combatidea : ScriptableObject {
     public int Cdef;
     public int Cmagdef;
     public int hpscale;
+    [Space]
     public bool prof_str;
     public bool prof_speed;
     public bool prof_intel;
     public bool prof_def;
     public bool prof_magdef;
+    [Space]
     public List<string> spellbook;
 
     public void AfterBattle()
@@ -94,5 +102,29 @@ public class combatidea : ScriptableObject {
         // if level up: add stats
         
     }
-                         
+    void OnEquip()
+    {
+        if (weapon.is_equipment)
+        {
+            if (whatWasWeapon != null)
+            {
+                str -= whatWasWeapon.str_increase;
+                intel -= whatWasWeapon.intel_increase;
+                magdef -= whatWasWeapon.mag_def_increase;
+                def -= whatWasWeapon.def_increase;
+                speed -= whatWasWeapon.speed_increase;
+            }
+
+            whatWasWeapon = weapon;
+
+            str += weapon.str_increase;
+            intel += weapon.intel_increase;
+            magdef += weapon.mag_def_increase;
+            def += weapon.def_increase;
+            speed += weapon.speed_increase;
+        }
+        else weapon = null;
+
+    }
+
 }

@@ -10,6 +10,10 @@ public class spellsorter : MonoBehaviour {
 	void Start () {
         stored_charecter = current_charecter;	
 	}
+    void Awake()
+    {
+        Update_Charecter();
+    }
     // Update is called once per frame
 
     void Update () {
@@ -19,7 +23,7 @@ public class spellsorter : MonoBehaviour {
         }
 	}
 
-    public void Update_Charecter (combatidea new_charecter)
+  /*  public void Update_Charecter (combatidea new_charecter)
     {
         current_charecter = new_charecter;
         stored_charecter = current_charecter;
@@ -29,13 +33,28 @@ public class spellsorter : MonoBehaviour {
             buttons[i].GetComponentInChildren<Text>().text = current_charecter.spellbook[i];
         }
     }
-
+*/
     public void Update_Charecter()
     {
         stored_charecter = current_charecter;
-        for (int i = 0; i < current_charecter.spellbook.Count; i++)
+        for (int i = 0; i < buttons.Length; i++)
         {
-            buttons[i].GetComponentInChildren<Text>().text = current_charecter.spellbook[i];
+            if (current_charecter.spellbook.Count > i)
+            {
+                Debug.Log("foo " + i);
+                buttons[i].GetComponentInChildren<Text>().text = current_charecter.spellbook[i];
+                buttons[i].GetComponent<Button>().interactable = true;
+            }
+
+            else
+            {
+                Debug.Log("foo " + i);
+                buttons[i].GetComponentInChildren<Text>().text = "";
+                buttons[i].GetComponent<Button>().interactable = false;
+
+
+            }
+
         }
     }
 }

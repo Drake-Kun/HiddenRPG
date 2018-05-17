@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class magicButtons : MonoBehaviour {
-
+public class AllCharecters : MonoBehaviour {
+    public combatidea[] list;
 	// Use this for initialization
 	void Start () {
 		

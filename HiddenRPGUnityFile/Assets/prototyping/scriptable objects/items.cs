@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "item", menuName = "items", order = 0)]
-public class items : MonoBehaviour {
+[CreateAssetMenu(fileName = "item", menuName = "items", order = 1)]
+public class items : ScriptableObject {
     public bool is_potion;
     public int healing;
     [Space]
@@ -36,11 +36,6 @@ public class items : MonoBehaviour {
 		
 	}
 
-    void onequip()
-    {
-
-
-
-    }
+    
 
 }

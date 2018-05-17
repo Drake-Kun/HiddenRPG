@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c3ef807778db44c84e073c9fe5fc90, type: 3}
+  m_Name: great potion
+  m_EditorClassIdentifier: 
+  is_potion: 1
+  healing: 18
+  is_equipment: 0
+  str_increase: 0
+  intel_increase: 0
+  def_increase: 0
+  speed_increase: 0
+  mag_def_increase: 0
+  is_bomb: 0
+  damage: 0
+  is_stat_booster: 0
+  consume_str_increase: 0
+  consume_intel_increase: 0
+  consume_def_increase: 0
+  consume_speed_increase: 0
+  consume_mag_def_increase: 0

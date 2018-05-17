@@ -36,4 +36,7 @@ MonoBehaviour:
   prof_intel: 0
   prof_def: 0
   prof_magdef: 0
-  spellbook: []
+  spellbook:
+  - fireball
+  - blizara
+  - thundaga

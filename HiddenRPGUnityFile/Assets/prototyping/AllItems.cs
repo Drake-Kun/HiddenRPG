@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "inventory", menuName = "inventory", order = 0)]
-public class Inventory : ScriptableObject  {
-    public List<items> items;
-
+public class AllItems : MonoBehaviour {
+    public items[] list;
 	// Use this for initialization
 	void Start () {
 		
