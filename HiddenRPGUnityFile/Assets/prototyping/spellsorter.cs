@@ -41,14 +41,13 @@ public class spellsorter : MonoBehaviour {
         {
             if (current_charecter.spellbook.Count > i)
             {
-                Debug.Log("foo " + i);
+                
                 buttons[i].GetComponentInChildren<Text>().text = current_charecter.spellbook[i];
                 buttons[i].GetComponent<Button>().interactable = true;
             }
 
             else
             {
-                Debug.Log("foo " + i);
                 buttons[i].GetComponentInChildren<Text>().text = "";
                 buttons[i].GetComponent<Button>().interactable = false;
 
