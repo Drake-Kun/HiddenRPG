@@ -12,19 +12,20 @@ MonoBehaviour:
   m_Name: nathan
   m_EditorClassIdentifier: 
   Name: nathan
-  sprite: {fileID: 21300000, guid: bf4f7bfd6e6fa7e449c91cb68528381e, type: 3}
-  mana: 0
-  maxhp: 0
-  hp: 0
+  sprite: {fileID: 21300000, guid: 3e265c59a848ca2459311528995542d6, type: 3}
+  weapon: {fileID: 0}
+  mana: 6
+  maxhp: 5
+  hp: 5
   lv: 0
   exp: 0
   expNeeded: 0
   exponent: 900
-  str: 0
-  speed: 0
-  intel: 0
-  def: 0
-  magdef: 0
+  str: 2
+  speed: 9
+  intel: 4
+  def: 2
+  magdef: 4
   Cstr: 0
   Cspeed: 0
   Cintel: 0

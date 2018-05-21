@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: kyler
   m_EditorClassIdentifier: 
   Name: kyler
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 6774207746a30bf4c921c30fbffb0be6, type: 3}
+  weapon: {fileID: 0}
   mana: 10
   maxhp: 9
   hp: 9
