@@ -53,8 +53,11 @@ public class SpawnEnemies : MonoBehaviour {
 				GameObject smallSlime;
 				normalSlime = Instantiate(slimePrefab, GetComponentInParent<Transform>());
                 enemies.Add(normalSlime);
-				smallSlime = Instantiate(smallSlimePrefab, GetComponentInParent<Transform>());
+                normalSlime.tag = "Enemy" + enemies.Count;
+
+                smallSlime = Instantiate(smallSlimePrefab, GetComponentInParent<Transform>());
                 enemies.Add(smallSlime);
+                smallSlime.tag = "Enemy" + enemies.Count;
             }
 
             // 25% chance: OR all are Slimes
