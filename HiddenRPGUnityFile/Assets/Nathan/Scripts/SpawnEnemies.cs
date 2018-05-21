@@ -16,7 +16,7 @@ public class SpawnEnemies : MonoBehaviour {
     void Start()
     {
         // Gets the (areaID) variable from the (GameInformationObject) -> (GameInformation) script
-        areaID = GameObject.Find("GameInformationObject").GetComponent<GameInformation>().areaID;
+        areaID = GameObject.Find("gameinfo").GetComponent<GameInformation>().areaID;
 
         // This is temporary
         areaID = 1;

@@ -170,18 +170,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameinfo: {fileID: 0}
+  partyUnitsInfo: []
   partyUnits: []
-  partyMember1Spells: []
-  partyMember2Spells: []
-  partyMember3Spells: []
-  partyMember4Spells: []
+  currentSpellBook: []
+  activePartyMemberInt: 0
   activePartyMember: {fileID: 0}
   targetUnit: {fileID: 0}
   enemyUnits:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  orderOfCombat: []
   expGiven: 0
+  expGivenBool: 0
 --- !u!4 &836308648
 Transform:
   m_ObjectHideFlags: 0
@@ -457,7 +458,7 @@ GameObject:
   - component: {fileID: 2138948462}
   - component: {fileID: 2138948461}
   m_Layer: 0
-  m_Name: GameInformationObject
+  m_Name: gameinfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
