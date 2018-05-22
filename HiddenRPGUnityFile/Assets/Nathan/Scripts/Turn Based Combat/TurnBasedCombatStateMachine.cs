@@ -90,8 +90,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
             case (BattleStates.CALCULATEDAMAGE):
 
                 // Run the MakeOrderOfCombat() function to figure out who goes first.
-                GetComponent<SetOrderOfCombat>().MakeOrderOfCombat();
-                orderOfCombat[0].GetComponent<>
+                
 
                 // (player1s turn)
                 // We use fireball
