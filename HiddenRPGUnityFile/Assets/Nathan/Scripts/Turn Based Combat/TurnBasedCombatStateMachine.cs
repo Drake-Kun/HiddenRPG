@@ -41,10 +41,10 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         currentState = BattleStates.START;
         expGivenBool = false;
         // Grabs the list of our party units from our (GameInformationObject)
-        //for (int i = 0; i < 4; i++)
-        //{
-        //    partyUnitsInfo.Add(gameinfo.GetComponent<listofParty>().ReturnChar(i));
-        //}
+        for (int i = 0; i < gameinfo.GetComponent<listofParty>().list.Count; i++)
+        {
+            partyUnitsInfo.Add(gameinfo.GetComponent<listofParty>().ReturnChar(i));
+        }
 
 
         // Grabs the (enemies) list from the (SpawnEnemies) script
@@ -90,7 +90,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
             case (BattleStates.CALCULATEDAMAGE):
 
                 // Run the MakeOrderOfCombat() function to figure out who goes first.
-                GetComponent<SetOrderOfCombat>().MakeOrderOfCombat();
+                
 
                 // (player1s turn)
                 // We use fireball

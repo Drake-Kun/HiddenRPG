@@ -6,19 +6,13 @@ public class SetOrderOfCombat : MonoBehaviour {
 
     public List<GameObject> orderOfCombat;
 
-    public void MakeOrderOfCombat()
-    {
-        
+    List<GameObject> partyUnits = GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().partyUnits;
+    List<GameObject> enemyUnits = GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().enemyUnits;
 
-        List<int> speedValues;
-        
-        //for (int i1 = 0; i < )
+    public List<GameObject> combatUnitsGameObject;
 
-        // Figure out who goes when based on speed, more speed means that unit goes sooner
-        //for (int i2 = 1000; i > 0; i++)
-        //{
-        //
-        //}
-    }
+    
 
 }
+
+
