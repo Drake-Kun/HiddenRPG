@@ -5,9 +5,13 @@ using UnityEngine;
 public class AllItems : MonoBehaviour {
     public items[] list;
 	// Use this for initialization
-	void Start () {
-		
-	}
+    void Use(items item)
+    {
+        if (item.is_potion)
+        {
+
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {

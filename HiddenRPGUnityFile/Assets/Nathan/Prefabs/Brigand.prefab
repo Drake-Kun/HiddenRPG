@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4387249178487266}
   - component: {fileID: 114487652294308112}
   - component: {fileID: 212157216362992762}
+  - component: {fileID: 114745510355851208}
   m_Layer: 0
   m_Name: Brigand
   m_TagString: Untagged
@@ -62,12 +63,29 @@ MonoBehaviour:
   spd: 5
   def: 3
   magicdef: 2
+  expGiven: 0
   isBurned: 0
   isPoisoned: 0
   isStunned: 0
   isAsleep: 0
   isSilenced: 0
   isBlinded: 0
+--- !u!114 &114745510355851208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596488112817360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1af0375012ec249a64f23458faca6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  Name: 
+  hp: 0
+  expgiven: 0
+  sprite: {fileID: 0}
 --- !u!212 &212157216362992762
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -6,8 +6,10 @@ public class TargetButtons : MonoBehaviour {
     public GameObject Enemy;
     public int num;
 	// Use this for initialization
-	void Awake () {
-        if (!(GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().enemyUnits[num] == null))
+	void FixedUpdate () {
+        
+        if (!(GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().enemyUnits[num] == null) && Enemy != null)
+            
         Enemy = GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().enemyUnits[num];
 
 	}
