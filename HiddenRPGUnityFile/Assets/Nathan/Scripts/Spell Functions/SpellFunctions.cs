@@ -11,7 +11,7 @@ public class SpellFunctions : MonoBehaviour {
     {
         switch(name){
             case "Attack":
-                Attack(activeUnit.GetComponent<PlayerInformation>().str, targetUnit.GetComponent<EnemyInformation>().def);
+                Attack(activeUnit.GetComponent<PlayerInformation>().representative.str, targetUnit.GetComponent<EnemyInformation>().def);
                 break;
 
             case "Fireball":
@@ -30,13 +30,11 @@ public class SpellFunctions : MonoBehaviour {
 
     public void Attack(int activeStr, int targetDef)
     {
-        int damage = (activeStr *= 1.5f - targetDef);
+        int damage = Mathf.RoundToInt(activeStr * 1.5f - targetDef);
     }
 
     public void Fireball()
     {
-        GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<CalculateDamage>().magAtk = 
-            GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<PlayerInformation>().representative.intel * 1;
 
         GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<CalculateDamage>().fireDamage = true;
 
