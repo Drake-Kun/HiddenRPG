@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class SpellFunctions : MonoBehaviour {
 
+    public GameObject activeUnit;
+    public GameObject targetUnit;
 
     public void converter(string name)
     {
         switch(name){
             case "Attack":
-                Attack();
+                Attack(activeUnit.GetComponent<PlayerInformation>().str, targetUnit.GetComponent<EnemyInformation>().def);
                 break;
 
             case "Fireball":
@@ -26,10 +28,9 @@ public class SpellFunctions : MonoBehaviour {
         }       
     }
 
-    public void Attack()
+    public void Attack(int activeStr, int targetDef)
     {
-        GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<CalculateDamage>().physAtk =
-            GetComponent<TurnBasedCombatStateMachine>().activePartyMember.GetComponent<PlayerInformation>().representative.str * 1;
+        int damage = (activeStr *= 1.5f - targetDef);
     }
 
     public void Fireball()

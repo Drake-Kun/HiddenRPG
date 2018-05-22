@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class CalculateDamage : MonoBehaviour {
 
+    public string attackName;
+    public GameObject activeUnit;
     public GameObject targetUnit;
 
-    public int physAtk;
-    public int magAtk;
-    public int physRes;
-    public int magRes;
+    public int str;
+    public int def;
+    public int intel;
+    public int magDef;
+    public int speed;
 
     public bool fireDamage;
 
@@ -19,7 +22,15 @@ public class CalculateDamage : MonoBehaviour {
 
     public void DoDamage()
     {
-        
+        if (activeUnit.GetComponent<PlayerInformation>() == true)
+        {
+            GetComponent<SpellFunctions>().converter(attackName);
+        }
+
+        else if (activeUnit.GetComponent<EnemyInformation>() == true)
+        {
+            GetComponent<EnemySpellFunctions>().converter(attackName);
+        }
     }
 
 }
