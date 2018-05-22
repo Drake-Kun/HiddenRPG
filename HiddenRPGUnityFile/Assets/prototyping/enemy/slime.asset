@@ -14,4 +14,4 @@ MonoBehaviour:
   Name: slime
   hp: 3
   expgiven: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300004, guid: 910d7cf62a10fa946bafdd4ce7fcb39f, type: 3}

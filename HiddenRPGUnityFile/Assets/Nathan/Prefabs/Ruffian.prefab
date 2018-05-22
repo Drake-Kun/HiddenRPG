@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1af0375012ec249a64f23458faca6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 11400000, guid: f75fcd5a4781f914bade900fdb5ca02a, type: 2}
   Name: 
   hp: 0
   expgiven: 0

@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 0}
-  num: 3
+  num: 2
 --- !u!1 &309035275
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &309035279
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 3
-  refrence: {fileID: 0}
+  refrence: {fileID: 11400000, guid: 4065087ef4cf083429da451efa779af4, type: 2}
   Cstr: 0
   Cspeed: 0
   Cintel: 0
@@ -1064,7 +1064,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &448509630
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1856,7 +1856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 0}
-  num: 1
+  num: 0
 --- !u!1 &734360977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,7 +2143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 1
-  refrence: {fileID: 0}
+  refrence: {fileID: 11400000, guid: d8d50b2c6d3e02747889d8fc56af9eb9, type: 2}
   Cstr: 0
   Cspeed: 0
   Cintel: 0
@@ -2434,7 +2434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 0}
-  num: 4
+  num: 3
 --- !u!1 &875664780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,7 +2515,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &875664784
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2603,7 +2603,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &906014696
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2872,7 +2872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 0}
-  num: 2
+  num: 1
 --- !u!1 &960288263
 GameObject:
   m_ObjectHideFlags: 0
@@ -4335,7 +4335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 0
-  refrence: {fileID: 0}
+  refrence: {fileID: 11400000, guid: 597bc326f635b2e46a35888e1261e0d9, type: 2}
   Cstr: 0
   Cspeed: 0
   Cintel: 0
