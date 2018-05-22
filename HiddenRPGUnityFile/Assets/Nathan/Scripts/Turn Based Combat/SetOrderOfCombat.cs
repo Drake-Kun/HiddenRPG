@@ -12,6 +12,11 @@ public class SetOrderOfCombat : MonoBehaviour {
 
     public List<GameObject> combatUnitsGameObject;
 
+    public void InitiateOrderOfCombat()
+    {
+
+    }
+
     public void MakeOrderOfCombat()
     {
         List<CombatUnit> combatUnitsClass = new List<CombatUnit>();

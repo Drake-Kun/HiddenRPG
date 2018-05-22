@@ -5,29 +5,16 @@ using UnityEngine;
 public class CalculateDamage : MonoBehaviour {
 
     public string attackName;
-    public GameObject activeUnit;
     public GameObject targetUnit;
-
-    public int str;
-    public int def;
-    public int intel;
-    public int magDef;
-    public int speed;
-
-    public bool fireDamage;
-
-    public float hitChance;
-
-    public string actionName;
 
     public void DoDamage()
     {
-        if (activeUnit.GetComponent<PlayerInformation>() == true)
+        if (gameObject.GetComponent<PlayerInformation>() == true)
         {
             GetComponent<SpellFunctions>().converter(attackName);
         }
 
-        else if (activeUnit.GetComponent<EnemyInformation>() == true)
+        else if (gameObject.GetComponent<EnemyInformation>() == true)
         {
             GetComponent<EnemySpellFunctions>().converter(attackName);
         }
