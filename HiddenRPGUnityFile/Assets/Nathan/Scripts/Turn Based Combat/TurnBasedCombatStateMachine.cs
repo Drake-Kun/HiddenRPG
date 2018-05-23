@@ -14,6 +14,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
     public int activePartyMemberInt;
     public GameObject activePartyMember;
+    public GameObject activeUnit;
     public GameObject targetUnit;
 
     public List<GameObject> enemyUnits;
@@ -23,6 +24,15 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
     public int expGiven;
     public bool expGivenBool;
+
+    // 1. Unit does damage
+    // 2. Unit inflicts a status ailment (not always)
+    // 3. Unit fells the enemy (not always)
+    public int stageOfDamageCalculation;
+    public int displayDamage;
+    public string statusAilment;
+    
+    
 
     public enum BattleStates
     {
@@ -74,10 +84,9 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
 
             case (BattleStates.PLAYERCHOICE):
-
                 
 
-                
+
 
                 break;
 
@@ -90,10 +99,9 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
             case (BattleStates.CALCULATEDAMAGE):
 
                 // Run the MakeOrderOfCombat() function to figure out who goes first.
-                GetComponent<SetOrderOfCombat>().MakeOrderOfCombat();                
-                orderOfCombat[0].GetComponent<CalculateDamage>().DoDamage();
-                orderOfCombat.RemoveAt(0);
                 GetComponent<SetOrderOfCombat>().MakeOrderOfCombat();
+                
+                
 
 
 
@@ -137,36 +145,159 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
     void OnclickSpell1()
     {
         activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[0];
+        activePartyMember.GetComponent<CalculateDamage>().BloodSacrificeCheck();
+        if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
+        {
+            // Tell the player "NO!!!"
+            activePartyMember.GetComponent<CalculateDamage>().attackName = null;
+            return;
+        }
+
+        // Let the player Select and enemy
     }
 
     void OnclickSpell2()
     {
         activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[1];
+        activePartyMember.GetComponent<CalculateDamage>().BloodSacrificeCheck();
+        if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
+        {
+            // Tell the player "NO!!!"
+            activePartyMember.GetComponent<CalculateDamage>().attackName = null;
+            return;
+        }
+
+        // Let the player Select and enemy
     }
 
     void OnclickSpell3()
     {
         activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[2];
+        activePartyMember.GetComponent<CalculateDamage>().BloodSacrificeCheck();
+        if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
+        {
+            // Tell the player "NO!!!"
+            activePartyMember.GetComponent<CalculateDamage>().attackName = null;
+            return;
+        }
+
+        // Let the player Select and enemy
     }
 
     void OnclickSpell4()
     {
         activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[3];
+        activePartyMember.GetComponent<CalculateDamage>().BloodSacrificeCheck();
+        if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
+        {
+            // Tell the player "NO!!!"
+            activePartyMember.GetComponent<CalculateDamage>().attackName = null;
+            return;
+        }
+
+        // Let the player Select and enemy
     }
 
     void OnclickSpell5()
     {
         activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[4];
+        activePartyMember.GetComponent<CalculateDamage>().BloodSacrificeCheck();
+        if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
+        {
+            // Tell the player "NO!!!"
+            activePartyMember.GetComponent<CalculateDamage>().attackName = null;
+            return;
+        }
+
+        // Let the player Select and enemy
     }
 
     void OnclickSpell6()
     {
         activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[5];
+        activePartyMember.GetComponent<CalculateDamage>().BloodSacrificeCheck();
+        if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
+        {
+            // Tell the player "NO!!!"
+            activePartyMember.GetComponent<CalculateDamage>().attackName = null;
+            return;
+        }
+
+        // Let the player Select and enemy
     }
 
     void OnClickEnemy1()
     {
         activePartyMember.GetComponent<CalculateDamage>().targetUnit = enemyUnits[0];
+        if (targetUnit.GetComponent<EnemyInformation>().isDead == true)
+        {
+            targetUnit = null;
+            return;
+        }
         activePartyMemberInt++;
+    }
+
+    void OnClickEnemy2()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().targetUnit = enemyUnits[1];
+        if (targetUnit.GetComponent<EnemyInformation>().isDead == true)
+        {
+            targetUnit = null;
+            return;
+        }
+        activePartyMemberInt++;
+    }
+
+    void OnClickEnemy3()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().targetUnit = enemyUnits[2];
+        if (targetUnit.GetComponent<EnemyInformation>().isDead == true)
+        {
+            targetUnit = null;
+            return;
+        }
+        activePartyMemberInt++;
+    }
+
+    void OnClickEnemy4()
+    {
+        activePartyMember.GetComponent<CalculateDamage>().targetUnit = enemyUnits[3];
+        if (targetUnit.GetComponent<EnemyInformation>().isDead == true)
+        {
+            targetUnit = null;
+            return;
+        }
+        activePartyMemberInt++;
+    }
+
+    void DamageCalculationProcess(string displayInfo)
+    {
+        if (activeUnit.GetComponent<EnemyInformation>() == true)
+        {
+            if (displayInfo == "Damage")
+            {
+                orderOfCombat[0].GetComponent<CalculateDamage>().DoDamage();
+                // text = targetUnit.GetComponent<EnemyInformation>().Name + " takes " + displayDamage + " damage!";
+                // displayDamage = null;
+            }
+
+            else if (displayInfo == "StatusInfliction" && statusAilment != null)
+            {
+                // text = targetUnit.GetComponent<EnemyInformation>().Name + " is now " + statusAilment;
+            }
+
+            else if (displayInfo == "EnemyDeath")
+            {
+                // text = "You fell the " + targetUnit.GetComponent<EnemyInformation>().Name;
+            }
+        }
+
+        else if (activeUnit.GetComponent<PlayerInformation>() == true)
+        {
+            if (displayInfo == "Damage")
+            {
+                // text = targetUnit.GetComponent<EnemyInformation>
+            }
+        }
     }
 }

@@ -23,4 +23,6 @@ public class EnemyInformation : MonoBehaviour {
     public bool isBurned;
     public bool isFrozen;
     public bool isParalyzed;
+
+    public bool isDead;
 }
