@@ -9,8 +9,14 @@ public class Tools : MonoBehaviour {
     void Awake()
     {
         gameinfo = GameObject.Find("gameinfo");
-        if(gameinfo.GetComponent<Inventory>().items.Count >= num)
-        gameObject.GetComponentInChildren<Text>().text = gameinfo.GetComponent<Inventory>().items[num].name + "";
+        if (gameinfo.GetComponent<Inventory>().items.Count >= num + 1)
+        {
+            gameObject.GetComponentInChildren<Text>().text = gameinfo.GetComponent<Inventory>().items[num].name + "";
+            gameObject.GetComponent<Button>().interactable = true;
+        }
+        else
+            gameObject.GetComponent<Button>().interactable = false;
+
     }
 
     void OnGUI()
@@ -27,6 +33,7 @@ public class Tools : MonoBehaviour {
     {
         gameObject.GetComponent<Image>().color = new Vector4(200, 200, 200, 1);
         gameObject.GetComponentInParent<Selection>().selected = this.gameObject;
+        gameObject.GetComponent<AudioSource>().Play();
     }
 	
 }
