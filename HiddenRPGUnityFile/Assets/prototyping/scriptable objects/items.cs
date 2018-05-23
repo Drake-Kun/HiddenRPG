@@ -4,7 +4,8 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "item", menuName = "items", order = 1)]
 public class items : ScriptableObject {
-
+    public string Name;
+    [Space]
     public bool is_potion;
     public int healing;
     [Space]
