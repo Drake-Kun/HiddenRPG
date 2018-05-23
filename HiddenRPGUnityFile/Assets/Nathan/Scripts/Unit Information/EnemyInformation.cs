@@ -15,12 +15,12 @@ public class EnemyInformation : MonoBehaviour {
     public int def;
     public int magicdef;
 
+    public string elementWeakness;
+    public string elementResistence;
+
     public int expGiven;
 
     public bool isBurned;
-    public bool isPoisoned;
-    public bool isStunned;
-    public bool isAsleep;
-    public bool isSilenced;
-    public bool isBlinded;
+    public bool isFrozen;
+    public bool isParalyzed;
 }

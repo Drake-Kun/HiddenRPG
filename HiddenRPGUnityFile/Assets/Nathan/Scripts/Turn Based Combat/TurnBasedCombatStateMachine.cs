@@ -131,37 +131,37 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
     void OnClickAttack()
     {
-        activePartyMember.GetComponent<CalculateDamage>().actionName = "Attack";
+        activePartyMember.GetComponent<CalculateDamage>().attackName = "Attack";
     }
 
     void OnclickSpell1()
     {
-        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[0];
+        activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[0];
     }
 
     void OnclickSpell2()
     {
-        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[1];
+        activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[1];
     }
 
     void OnclickSpell3()
     {
-        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[2];
+        activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[2];
     }
 
     void OnclickSpell4()
     {
-        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[3];
+        activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[3];
     }
 
     void OnclickSpell5()
     {
-        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[4];
+        activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[4];
     }
 
     void OnclickSpell6()
     {
-        activePartyMember.GetComponent<CalculateDamage>().actionName = currentSpellBook[5];
+        activePartyMember.GetComponent<CalculateDamage>().attackName = currentSpellBook[5];
     }
 
     void OnClickEnemy1()
