@@ -145,6 +145,9 @@ public class SpawnEnemies : MonoBehaviour {
 
 
         }
+
+        // Grabs the (enemyUnits) list from TurnBasedCombatStateMachine script, then sets it to the (enemies) list from here.
+        GetComponent<TurnBasedCombatStateMachine>().enemyUnits = enemies;
     }
 
 }
