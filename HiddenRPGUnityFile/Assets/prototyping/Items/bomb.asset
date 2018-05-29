@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c3ef807778db44c84e073c9fe5fc90, type: 3}
   m_Name: bomb
   m_EditorClassIdentifier: 
+  Display: {fileID: 21300000, guid: e4e22312b9aa15d48ad4656d07f5001b, type: 3}
+  Name: Bomb
   is_potion: 0
   healing: 0
   is_equipment: 0

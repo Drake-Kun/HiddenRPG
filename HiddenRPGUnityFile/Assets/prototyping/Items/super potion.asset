@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c3ef807778db44c84e073c9fe5fc90, type: 3}
   m_Name: super potion
   m_EditorClassIdentifier: 
+  Display: {fileID: 21300000, guid: 47dc29b54aef16044b77b6796e2b7f70, type: 3}
+  Name: 
   is_potion: 1
   healing: 60
   is_equipment: 0

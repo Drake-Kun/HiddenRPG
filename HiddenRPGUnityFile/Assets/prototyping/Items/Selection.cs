@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Selection : MonoBehaviour {
     public GameObject selected;
-    
+    public combatidea selectedchar;
 }

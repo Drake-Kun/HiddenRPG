@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c3ef807778db44c84e073c9fe5fc90, type: 3}
   m_Name: tactical nuke
   m_EditorClassIdentifier: 
+  Display: {fileID: 0}
+  Name: thermo nucular device
   is_potion: 0
   healing: 0
   is_equipment: 0

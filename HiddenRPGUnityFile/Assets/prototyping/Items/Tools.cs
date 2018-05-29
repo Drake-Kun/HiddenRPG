@@ -6,16 +6,18 @@ public class Tools : MonoBehaviour {
 
     public GameObject gameinfo;
     public int num;
-    void Awake()
+    void Update()
     {
         gameinfo = GameObject.Find("gameinfo");
-        if (gameinfo.GetComponent<Inventory>().items.Count >= num + 1)
+        if (gameinfo.GetComponent<Inventory>().items.Count >= num + 1 )
         {
             gameObject.GetComponentInChildren<Text>().text = gameinfo.GetComponent<Inventory>().items[num].name + "";
             gameObject.GetComponent<Button>().interactable = true;
         }
-        else
+        else {
             gameObject.GetComponent<Button>().interactable = false;
+            gameObject.GetComponentInChildren<Text>().text = "";
+                }
 
     }
 
