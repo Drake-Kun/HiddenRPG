@@ -19,6 +19,74 @@ public class SpellFunctions : MonoBehaviour {
             case "Fire":
                 Fire(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
                 break;
+
+            case "Flame":
+                Flame(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Cinder":
+                Cinder(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Ice":
+                Ice(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Chill":
+                Chill(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Frost":
+                Frost(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Thunder":
+                Thunder(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Thunderbolt":
+                Thunderbolt(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Lightning":
+                Lightning(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Wind":
+                Wind(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Gust":
+                Gust(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Whirlwind":
+                Whirlwind(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Shine":
+                Shine(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Radiate":
+                Radiate(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Purify":
+                Purify(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Shade":
+                Shade(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Darken":
+                Darken(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
+
+            case "Taint":
+                Taint(activeUnit.GetComponent<PlayerInformation>().representative.intel, targetUnit.GetComponent<EnemyInformation>().magicdef);
+                break;
         }       
     }
 
@@ -44,13 +112,13 @@ public class SpellFunctions : MonoBehaviour {
 
 
         // If the enemy is weak to fire, multiply the damage int to do extra damage
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Fire")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Fire"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
         // If the enemy is resistant to fire, multiply the damage into to do less damage
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Fire")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Fire"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -68,12 +136,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 85) - targetMagDef);
         // actionElementType = "Fire";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Fire")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Fire"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Fire")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Fire"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -91,12 +159,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 115) - targetMagDef);
         // actionElementType = "Fire";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Fire")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Fire"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Fire")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Fire"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -106,6 +174,7 @@ public class SpellFunctions : MonoBehaviour {
         if (inflictStatusAilment > 90)
         {
             GetComponent<TurnBasedCombatStateMachine>().targetUnit.GetComponent<EnemyInformation>().isBurned = true;
+            GetComponent<TurnBasedCombatStateMachine>().statusAilment = "burned";
         }
 
         // Apply damage
@@ -123,12 +192,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 40) - targetMagDef);
         // actionElementType = "Ice";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Ice")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Ice"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Ice")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Ice"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -146,12 +215,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 85) - targetMagDef);
         // actionElementType = "Ice";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Ice")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Ice"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Ice")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Ice"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -169,12 +238,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 115) - targetMagDef);
         // actionElementType = "Ice";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Ice")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Ice"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Ice")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Ice"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -184,6 +253,7 @@ public class SpellFunctions : MonoBehaviour {
         if (inflictStatusAilment > 90)
         {
             GetComponent<TurnBasedCombatStateMachine>().targetUnit.GetComponent<EnemyInformation>().isFrozen = true;
+            GetComponent<TurnBasedCombatStateMachine>().statusAilment = "frozen";
         }
 
         // Apply damage
@@ -201,12 +271,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 40) - targetMagDef);
         // actionElementType = "Thunder";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Thunder")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Thunder"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Thunder")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Thunder"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -224,12 +294,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 85) - targetMagDef);
         // actionElementType = "Thunder";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Thunder")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Thunder"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Thunder")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Thunder"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -247,12 +317,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 115) - targetMagDef);
         // actionElementType = "Thunder";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Thunder")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Thunder"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Thunder")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Thunder"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -262,6 +332,7 @@ public class SpellFunctions : MonoBehaviour {
         if (inflictStatusAilment > 90)
         {
             GetComponent<TurnBasedCombatStateMachine>().targetUnit.GetComponent<EnemyInformation>().isParalyzed = true;
+            GetComponent<TurnBasedCombatStateMachine>().statusAilment = "paralyzed";
         }
 
         // Apply damage
@@ -279,12 +350,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 40) - targetMagDef);
         // actionElementType = "Wind";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Wind")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Wind"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Wind")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Wind"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -302,12 +373,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 85) - targetMagDef);
         // actionElementType = "Wind";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Wind")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Wind"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Wind")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Wind"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -325,12 +396,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 115) - targetMagDef);
         // actionElementType = "Wind";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Wind")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Wind"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Wind")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Wind"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -345,12 +416,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 60) - targetMagDef);
         // actionElementType = "Light";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Light")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Light"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Light")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Light"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -370,12 +441,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 130) - targetMagDef);
         // actionElementType = "Light";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Light")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Light"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Light")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Light"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -396,12 +467,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 180) - targetMagDef);
         // actionElementType = "Light";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Light")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Light"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Light")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Light"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -424,12 +495,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 50) - targetMagDef);
         // actionElementType = "Shade";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Shade")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Shade"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Shade")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Shade"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -449,12 +520,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 100) - Mathf.RoundToInt(targetMagDef / 0.7f));
         // actionElementType = "Shade";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Shade")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Shade"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Shade")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Shade"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
@@ -474,12 +545,12 @@ public class SpellFunctions : MonoBehaviour {
         int damage = Mathf.RoundToInt((activeIntel + 150) - Mathf.RoundToInt(targetMagDef / 0.5f));
         // actionElementType = "Shade";
 
-        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness == "Shade")
+        if (targetUnit.GetComponent<EnemyInformation>().elementWeakness.Contains("Shade"))
         {
             damage = Mathf.RoundToInt(damage * 1.50f);
         }
 
-        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence == "Shade")
+        else if (targetUnit.GetComponent<EnemyInformation>().elementResistence.Contains("Shade"))
         {
             damage = Mathf.RoundToInt(damage * 0.5f);
         }
