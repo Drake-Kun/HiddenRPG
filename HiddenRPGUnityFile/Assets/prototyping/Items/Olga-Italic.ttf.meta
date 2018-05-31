@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e8ab3b5c0306534439c82ce3bbbdd69d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Olga
+  fontNames:
+  - Olga
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ce16cf7bc106d8a4c90232bccaa3eca9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
