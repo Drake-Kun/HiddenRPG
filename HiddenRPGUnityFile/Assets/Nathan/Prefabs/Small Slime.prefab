@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114250872379291964}
   - component: {fileID: 212216163583003824}
   - component: {fileID: 114763158340437860}
+  - component: {fileID: 114553579336621308}
   m_Layer: 0
   m_Name: Small Slime
   m_TagString: Untagged
@@ -63,13 +64,27 @@ MonoBehaviour:
   spd: 1
   def: 1
   magicdef: 1
+  elementWeakness: []
+  elementResistence: []
   expGiven: 20
   isBurned: 0
-  isPoisoned: 0
-  isStunned: 0
-  isAsleep: 0
-  isSilenced: 0
-  isBlinded: 0
+  isFrozen: 0
+  isParalyzed: 0
+  isDead: 0
+--- !u!114 &114553579336621308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221740244838804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac10bf9d5a0e18449bd1f3287e8dd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: 
+  validMove: 0
+  targetUnit: {fileID: 0}
 --- !u!114 &114763158340437860
 MonoBehaviour:
   m_ObjectHideFlags: 1

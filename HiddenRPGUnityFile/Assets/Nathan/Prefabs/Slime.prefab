@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114928791960858922}
   - component: {fileID: 212457529680388966}
   - component: {fileID: 114842985999855486}
+  - component: {fileID: 114413270761290536}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -42,6 +43,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114413270761290536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826466909557362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac10bf9d5a0e18449bd1f3287e8dd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: 
+  validMove: 0
+  targetUnit: {fileID: 0}
 --- !u!114 &114842985999855486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,13 +94,13 @@ MonoBehaviour:
   spd: 4
   def: 1
   magicdef: 2
+  elementWeakness: []
+  elementResistence: []
   expGiven: 40
   isBurned: 0
-  isPoisoned: 0
-  isStunned: 0
-  isAsleep: 0
-  isSilenced: 0
-  isBlinded: 0
+  isFrozen: 0
+  isParalyzed: 0
+  isDead: 0
 --- !u!212 &212457529680388966
 SpriteRenderer:
   m_ObjectHideFlags: 1

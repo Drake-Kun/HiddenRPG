@@ -39,6 +39,9 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
     // This is the list that has the order of units that will take action based on speed: Fastest goes first, slowest goes last. Updates after every DoDamage();
     public List<GameObject> orderOfCombat;
 
+    // This is the active player's name, letting the player know who's turn it is.
+    public GameObject displayName;
+
     // This is the text that will display the progressive information of the battle, such as damage done, status effects inflicted, etc.
     public GameObject displayText;
 
@@ -93,15 +96,11 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-        }
-
         // activePartyMember = partyUnits[activePartyMemberInt];
 
         switch (currentState)
         {
+
 
             case (BattleStates.START):
 
@@ -113,11 +112,32 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
             case (BattleStates.PLAYERCHOICE):
 
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    activePartyMemberInt--;
+                    activePartyMember = partyUnits[activePartyMemberInt];
+                    activePartyMember.GetComponent<CalculateDamage>().attackName = null;
+                    activePartyMember.GetComponent<CalculateDamage>().targetUnit = null;
 
+                }
 
-                // vvv When we are done making our choices, probably an if statement vvv
-                stageOfDamageCalculation = 0;
+                if (activePartyMember.GetComponent<CalculateDamage>().attackName != null && activePartyMember.GetComponent<CalculateDamage>().targetUnit != null)
+                {
+                    activePartyMemberInt++;
 
+                    // If we still have party members who need to make a choice, let them.
+                    if (activePartyMemberInt < partyUnits.Count)
+                    {
+                        activePartyMember = partyUnits[activePartyMemberInt];
+                    }
+
+                    // If we don't have any more party members who need to make a choice, go to damage calculation
+                    else
+                    {
+                        stageOfDamageCalculation = 0;
+                        currentState = BattleStates.CALCULATEDAMAGE;
+                    }
+                }
                 break;
 
 
@@ -186,7 +206,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-
+                    DamageCalculationProcess();
                 }
 
                 break;
@@ -298,6 +318,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
         {
             // Tell the player "NO!!!"
+            displayText.GetComponent<Text>().text = "You don't have the strength to do that!";
             activePartyMember.GetComponent<CalculateDamage>().attackName = null;
             return;
         }
@@ -312,6 +333,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
         {
             // Tell the player "NO!!!"
+            displayText.GetComponent<Text>().text = "You don't have the strength to do that!";
             activePartyMember.GetComponent<CalculateDamage>().attackName = null;
             return;
         }
@@ -326,6 +348,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
         {
             // Tell the player "NO!!!"
+            displayText.GetComponent<Text>().text = "You don't have the strength to do that!";
             activePartyMember.GetComponent<CalculateDamage>().attackName = null;
             return;
         }
@@ -340,6 +363,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
         {
             // Tell the player "NO!!!"
+            displayText.GetComponent<Text>().text = "You don't have the strength to do that!";
             activePartyMember.GetComponent<CalculateDamage>().attackName = null;
             return;
         }
@@ -354,6 +378,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
         {
             // Tell the player "NO!!!"
+            displayText.GetComponent<Text>().text = "You don't have the strength to do that!";
             activePartyMember.GetComponent<CalculateDamage>().attackName = null;
             return;
         }
@@ -368,6 +393,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour {
         if (activePartyMember.GetComponent<CalculateDamage>().validMove == false)
         {
             // Tell the player "NO!!!"
+            displayText.GetComponent<Text>().text = "You don't have the strength to do that!";
             activePartyMember.GetComponent<CalculateDamage>().attackName = null;
             return;
         }
