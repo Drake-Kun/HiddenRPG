@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114487652294308112}
   - component: {fileID: 212157216362992762}
   - component: {fileID: 114745510355851208}
+  - component: {fileID: 114105779033281614}
   m_Layer: 0
   m_Name: Brigand
   m_TagString: Untagged
@@ -42,6 +43,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114105779033281614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1596488112817360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac10bf9d5a0e18449bd1f3287e8dd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: 
+  validMove: 0
+  targetUnit: {fileID: 0}
 --- !u!114 &114487652294308112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63,13 +78,13 @@ MonoBehaviour:
   spd: 5
   def: 3
   magicdef: 2
+  elementWeakness: []
+  elementResistence: []
   expGiven: 0
   isBurned: 0
-  isPoisoned: 0
-  isStunned: 0
-  isAsleep: 0
-  isSilenced: 0
-  isBlinded: 0
+  isFrozen: 0
+  isParalyzed: 0
+  isDead: 0
 --- !u!114 &114745510355851208
 MonoBehaviour:
   m_ObjectHideFlags: 1

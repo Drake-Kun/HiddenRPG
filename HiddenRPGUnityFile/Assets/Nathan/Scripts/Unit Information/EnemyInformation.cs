@@ -15,8 +15,8 @@ public class EnemyInformation : MonoBehaviour {
     public int def;
     public int magicdef;
 
-    public string elementWeakness;
-    public string elementResistence;
+    public List<string> elementWeakness;
+    public List<string> elementResistence;
 
     public int expGiven;
 

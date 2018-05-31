@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61e682b48bfd80240b436768ad5e0ed5, type: 3}
-  m_Name: nathan
+  m_Name: MrBlueberry
   m_EditorClassIdentifier: 
-  Name: nathan
+  Name: Mr.Blueberry
   sprite: {fileID: 21300000, guid: 3e265c59a848ca2459311528995542d6, type: 3}
   weapon: {fileID: 0}
   mana: 6

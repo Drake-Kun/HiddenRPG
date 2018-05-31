@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114633377651475902}
   - component: {fileID: 212736209273789332}
   - component: {fileID: 114273968642001430}
+  - component: {fileID: 114182320362614516}
   m_Layer: 0
   m_Name: Ruffian
   m_TagString: Untagged
@@ -42,6 +43,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114182320362614516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735434453491982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac10bf9d5a0e18449bd1f3287e8dd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: 
+  validMove: 0
+  targetUnit: {fileID: 0}
 --- !u!114 &114273968642001430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,13 +94,13 @@ MonoBehaviour:
   spd: 5
   def: 4
   magicdef: 3
+  elementWeakness: []
+  elementResistence: []
   expGiven: 0
   isBurned: 0
-  isPoisoned: 0
-  isStunned: 0
-  isAsleep: 0
-  isSilenced: 0
-  isBlinded: 0
+  isFrozen: 0
+  isParalyzed: 0
+  isDead: 0
 --- !u!212 &212736209273789332
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -162,6 +162,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114633377651475902, guid: 7bfdbdec380412847af96bcc60dc1196,
+        type: 2}
+      propertyPath: spd
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bfdbdec380412847af96bcc60dc1196, type: 2}
   m_IsPrefabAsset: 0
@@ -285,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orderOfCombat: []
-  combatUnitsGameObject: []
+  combatUnits: []
 --- !u!1 &1138914062
 GameObject:
   m_ObjectHideFlags: 0
