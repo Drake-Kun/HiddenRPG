@@ -16,7 +16,7 @@ public class EarthintoThunder : MonoBehaviour {
 		if (myCollisionInfo.gameObject.name == "Door") 
 		{
 			//load next level
-			SceneManager.LoadScene("Town1");
+			SceneManager.LoadScene("DemoEnd");
 			//this code will reload the current scene
 			//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 

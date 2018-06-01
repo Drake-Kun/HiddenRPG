@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Gerardo/House.unity
     guid: 932df061a3cd83f40982a62d57d0e985
+  - enabled: 1
+    path: Assets/Gerardo/DemoEnd.unity
+    guid: 70877c9246512ec40a87feb1d1f9f86f
   m_configObjects: {}

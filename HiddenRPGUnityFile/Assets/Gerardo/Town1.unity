@@ -40630,9 +40630,9 @@ GameObject:
   - component: {fileID: 1781405945}
   - component: {fileID: 1781405944}
   - component: {fileID: 1781405948}
+  - component: {fileID: 1781405950}
   - component: {fileID: 1781405949}
   - component: {fileID: 1781405943}
-  - component: {fileID: 1781405950}
   - component: {fileID: 1781405951}
   m_Layer: 0
   m_Name: Prototype_0
@@ -40857,7 +40857,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1781405942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac77b45cdc994a4c91ca333f5090b25, type: 3}
+  m_Script: {fileID: 11500000, guid: 9862a0e88ad786948b4df38eca768b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1781405951
