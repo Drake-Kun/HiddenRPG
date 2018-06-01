@@ -3480,6 +3480,7 @@ GameObject:
   - component: {fileID: 755494124}
   - component: {fileID: 755494123}
   - component: {fileID: 755494122}
+  - component: {fileID: 755494125}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -3576,6 +3577,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &755494125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 755494121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0931bd0dbb9053849a840f37da095471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whats_In_The_Chest:
+  - {fileID: 11400000, guid: 70a439e8c9f5a8a4e945a30758534bc2, type: 2}
 --- !u!1 &758544632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,6 +4512,7 @@ GameObject:
   - component: {fileID: 1903087325}
   - component: {fileID: 1903087324}
   - component: {fileID: 1903087323}
+  - component: {fileID: 1903087326}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -4594,6 +4609,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1903087326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1903087322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0931bd0dbb9053849a840f37da095471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whats_In_The_Chest:
+  - {fileID: 11400000, guid: c818444646a30e04ba9ee4a26378a682, type: 2}
 --- !u!1 &1941601687
 GameObject:
   m_ObjectHideFlags: 0
@@ -4813,6 +4841,7 @@ GameObject:
   - component: {fileID: 2086873421}
   - component: {fileID: 2086873420}
   - component: {fileID: 2086873419}
+  - component: {fileID: 2086873422}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -4909,6 +4938,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2086873422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2086873418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0931bd0dbb9053849a840f37da095471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whats_In_The_Chest:
+  - {fileID: 11400000, guid: 0b99fb24ce7da5b4cb929fc055f09292, type: 2}
 --- !u!1 &2094571317
 GameObject:
   m_ObjectHideFlags: 0
@@ -4919,6 +4961,7 @@ GameObject:
   - component: {fileID: 2094571320}
   - component: {fileID: 2094571319}
   - component: {fileID: 2094571318}
+  - component: {fileID: 2094571321}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -5015,3 +5058,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2094571321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2094571317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0931bd0dbb9053849a840f37da095471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whats_In_The_Chest:
+  - {fileID: 11400000, guid: 813f6a7efd78cea4297441acbf7fc841, type: 2}
