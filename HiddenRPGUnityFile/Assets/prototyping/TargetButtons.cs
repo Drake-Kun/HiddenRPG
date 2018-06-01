@@ -8,23 +8,27 @@ public class TargetButtons : MonoBehaviour {
     // Use this for initialization
     public void ModifiedStart()
         {
-           Enemy = GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().enemyUnits[num];
-
+        Debug.Log("HIt");
+        Enemy = GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().enemyUnits[num];
+        Debug.Log("HIt");
         }
 	void FixedUpdate () {
 
-/*        if (Enemy == null)
+        /*        if (Enemy == null)
+                {
+                    Enemy = GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().enemyUnits[num];
+                   */
+        if (Enemy != null)
         {
-            Enemy = GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().enemyUnits[num];
-           */ 
-            if (Enemy != null)
-            {
-                gameObject.GetComponent<Button>().interactable = true;
-                gameObject.GetComponentInChildren<Text>().text = Enemy.GetComponent<EnemyInfo>().name;
+            gameObject.GetComponent<Button>().interactable = true;
+            gameObject.GetComponentInChildren<Text>().text = Enemy.GetComponent<EnemyInfo>().name;
+            Debug.Log("hitt");
             }
-            //}
-        else if (Enemy == null)
+        //}
+        else if (Enemy == null) {
             gameObject.GetComponent<Button>().interactable = false;
+            Debug.Log("hittt");
+        }
 	}
 	
 	// Update is called once per frame
