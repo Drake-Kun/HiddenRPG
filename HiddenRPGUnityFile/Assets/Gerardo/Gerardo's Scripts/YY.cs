@@ -13,10 +13,10 @@ public class YY : MonoBehaviour {
 		//we debug.log the name of the object we
 		//ran into,that triggered the collision
 		Debug.Log (myCollisionInfo.gameObject.name); 
-		if (myCollisionInfo.gameObject.name == "House") 
+		if (myCollisionInfo.gameObject.name == "YeYe") 
 		{
 			//load next level
-			SceneManager.LoadScene("Lvl1");
+			SceneManager.LoadScene("House");
 			//this code will reload the current scene
 			//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
