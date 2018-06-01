@@ -8,9 +8,9 @@ public class TargetButtons : MonoBehaviour {
     // Use this for initialization
     public void ModifiedStart()
         {
-        Debug.Log("HIt");
+       
         Enemy = GameObject.Find("combat machine").GetComponent<TurnBasedCombatStateMachine>().enemyUnits[num];
-        Debug.Log("HIt");
+        
         }
 	void FixedUpdate () {
 
@@ -22,12 +22,12 @@ public class TargetButtons : MonoBehaviour {
         {
             gameObject.GetComponent<Button>().interactable = true;
             gameObject.GetComponentInChildren<Text>().text = Enemy.GetComponent<EnemyInfo>().name;
-            Debug.Log("hitt");
+            
             }
         //}
         else if (Enemy == null) {
             gameObject.GetComponent<Button>().interactable = false;
-            Debug.Log("hittt");
+            
         }
 	}
 	

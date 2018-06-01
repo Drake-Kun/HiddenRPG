@@ -9,10 +9,9 @@ public class chest : MonoBehaviour {
     {
        if( collision.gameObject.tag == "Player")
         {
-            for (int i = 0; i < whats_In_The_Chest.Length; i++)
-            {
-                GameObject.Find("gameinfo").GetComponent<Inventory>().items.Add(whats_In_The_Chest[i]);
-            }
+
+                GameObject.Find("gameinfo").GetComponent<Inventory>().items.AddRange(whats_In_The_Chest);
+            GameObject.Find("gameinfo").GetComponent<Inventory>().items.RemoveRange(0,whats_In_The_Chest.Length);
         }
     }
 
